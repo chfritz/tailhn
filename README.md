@@ -1,6 +1,8 @@
 Tiny script to tail new stories on Hacker News from the command line. Prints titles and urls to the console.
 
-![image](./demo.svg)
+<p align="center">
+  <img src="https://github.com/chfritz/tailhn/raw/main/demo.svg">
+</p>
 
 # Requirements
 
