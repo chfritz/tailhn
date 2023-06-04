@@ -1,6 +1,6 @@
 {
   "name": "tailhn",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tiny script to tail Hacker News. Use with grep to monitor for stories of interest.",
   "main": "main.js",
   "bin": "./main.js",
