@@ -1,0 +1,19 @@
+{
+  "name": "tailhn",
+  "version": "1.0.2",
+  "description": "Tiny script to tail Hacker News. Use with grep to monitor for stories of interest.",
+  "main": "main.js",
+  "bin": "./main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hacker news"
+  ],
+  "author": "Christian Fritz",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.1"
+  }
+}
