@@ -25,10 +25,19 @@ const fetchNew = async () => {
     `${baseURL}/newstories.json?&orderBy="$key"&limitToFirst=30`);
   // we assume there are no more than 30 new stories per minute
 
+  if (!data) {
+    console.warn('failed to fetch latest');
+    return;
+  }
+
   const newItems = data.filter(id => !seen.has(id));
   newItems.forEach(async itemId => {
-    const {title, url} = await fetchJson(`${baseURL}/item/${itemId}.json`);
-    console.log(`${title}. ${url || `${hnItemURL}${itemId}`}`);
+    const res = await fetchJson(`${baseURL}/item/${itemId}.json`);
+    if (!res) {
+      console.warn(`** Failure to retrieve ${itemId}`);
+    } else {
+      console.log(`${res.title}. ${res.url || ''} ${hnItemURL}${itemId}`);
+    }
     seen.add(itemId);
   });
 }
